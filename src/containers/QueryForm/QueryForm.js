@@ -42,18 +42,20 @@ export default class QueryForm extends Component {
     localSubmitHandler = () => {
         this.getFile()
         .then(res => {
-            let sizeArr = this.state.queryRows.map((lessonSet) => {
-                let filteredObjects = res.filter(obj => {
-                    return obj.series === Number(lessonSet.series);
-                }).filter(obj => {
-                    return obj.lesson >= Number(lessonSet.lessonStart);
-                }).filter(obj => {
-                    return obj.lesson <= Number(lessonSet.lessonEnd);
+            let sizeArr = this.state.queryRows.map((row) => {
+                let filteredLessons = res.filter(lessonItem => {
+                    return lessonItem.series === Number(row.series);
+                }).filter(lessonItem => {
+                    return lessonItem.lesson >= Number(row.lessonStart);
+                }).filter(lessonItem => {
+                    return lessonItem.lesson <= Number(row.lessonEnd);
                 });
+
                 let data = [];
-                filteredObjects.forEach(obj => {
-                    data.push(obj.size);
+                filteredLessons.forEach(lessonItem => {
+                    data.push(lessonItem.size);
                 });
+                
                 let totalSize = data.reduce(function(sum, value) {
                     return sum + value;
                 }, 0)/(1024*1024);
