@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './App.css';
 import './materialize.css';
 
-// import QueryLine from './containers/QueryLine/QueryLine';
 import QueryForm from './containers/QueryForm/QueryForm';
 
 class App extends Component {

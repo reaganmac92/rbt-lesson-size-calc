@@ -1,8 +1,6 @@
 import React from 'react';
 import ItemInput from '../../components/ItemInput/ItemInput';
 
-
-
 export default function QueryRow(props) {
 
     const seriesChangeHandler = (e) => {
