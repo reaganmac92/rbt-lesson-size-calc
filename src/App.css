@@ -1,0 +1,105 @@
+.App {
+  text-align: center;
+}
+
+body {
+  background: rgb(24,192,219);
+  background: linear-gradient(15deg, rgba(24,192,219,1) 0%, rgba(38,105,175,1) 47%, rgba(158,0,255,1) 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: white
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.seriesCard {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  width: 50vw;
+  margin: 5px auto !important;
+  position: relative;
+  flex-wrap: wrap !important;
+}
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Material Icons'),
+    local('MaterialIcons-Regular'),
+    url(./MaterialIcons-Regular.woff) format('woff')
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+.close-btn {
+  cursor: pointer;
+  color: red;
+  position: absolute;
+  top: 0;
+  right: 0;
+  /* margin-bottom: -2em; */
+}
+
+.font-black {
+  color: black;
+}
+
+.font-green {
+  color: green;
+}
+
+.font-red {
+  color: red;
+}
+
+.add-btn {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+}
+
+@media only screen and (max-width: 695px) {
+  .container {
+    margin: 0 !important;
+    width: 98vw !important;
+  }
+  .seriesCard {
+    width: 100%;
+  }
+}
